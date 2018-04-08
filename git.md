@@ -5,13 +5,13 @@
 
 ## git分支相关的命令
 
-* 创建一个分支         
-`git branch dev`
+* 创建一个新的分支         
+`git branch dev` #注意是从当前分支创建
 
 * 切换到一个分支       
 `git checkout dev`
 
-* 创建并切换到一个分支     
+* 创建并切换到一个新的分支     
 `git checkout -b dev`
 
 * 查看所有分支         
