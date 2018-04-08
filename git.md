@@ -25,7 +25,8 @@
 `git branch -d dev`
 
 
-## git标签相关的命令
+## git标签相关的命令 
+以下"mytag"都是自己起的标签名
 
 * 列出当前分支下的所有标签     
 `git tag`
