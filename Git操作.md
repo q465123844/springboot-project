@@ -21,13 +21,14 @@
 * 当对工作区修改（或新增）的文件执行 `git add` 命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。  
 * 当执行提交操作（`git commit`）时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。 
 * 当执行 `git checkout .` 或者 `git checkout -- <file>` 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区的改动。
-* 当执行 `git reset HEAD` 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。
+* 当执行 `git reset HEAD ` 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。
 >上面两个命令就对应以下两种情景  
 场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令`git checkout -- file`。  
 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令`git reset HEAD <file>`，就回到了场景1，第二步按场景1操作。
   
 * 当执行 `git checkout HEAD .` 或者 `git checkout HEAD <file>` 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。 
->可以看出这个命令是上面两个命令的结合。
+>所以总结起来就是， `git checkout -- <file>`是从缓存区到工作区，`git reset HEAD`是从版本库到缓存区，`git checkout HEAD <file>`是从版本库直接到工作区。可以看出`git checkout HEAD <file>`命令是上面`git reset HEAD`和`git checkout -- <file>`两个命令的结合 。
+
 * 当执行 `git rm --cached <file>` 命令时，会直接从暂存区删除文件，工作区则不做出改变。  
 
 ### HEAD是什么？
@@ -82,9 +83,12 @@ https://cdn.liaoxuefeng.com/cdn/files/attachments/001384907594057a873c79f14184b4
 * 删除标签      
 `git tag -d 'mytag'`
 
-* 给自定的commit打标签   
+* 给指定的commit打标签   
 打标签不一定打在当前的head上，如果想打在以前的提交上，可以使用以下命令   
 `git tag -a "mytag" "commitId"`
+
+* 给指定commitid打标签时写注释
+`git tag -a "mytag" -m "commitId"`
 
 * 将标签提交到git服务器    
 通常git push不会将标签提交到git服务器，我们需要显式操作     
