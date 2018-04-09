@@ -32,7 +32,7 @@
 
 ### HEAD是什么？
 
-上面是为了说明工作区、缓存区、版本库的概念，作了简化，针对只有一个master分支而言，实际上HEAD指向当前活动的的分支的当前版本，比如我的项目有两个分支dev,master,我现在`git checkout dev`到dev分支上，然后dev分支有3次提交（按提交顺序记commitid分别为c1,c2,c3），这是我当前版本就在commitid为最新提交c3,所以HEAD就指向c3,当我用`git reset --hard c1`命令回到第一次提交的版本时，这是HEAD就指向c1。
+上面是为了说明工作区、缓存区、版本库的概念，作了简化，针对只有一个master分支而言，实际上HEAD指向当前活动分支的当前活动版本，比如我的项目有两个分支dev,master,我现在`git checkout dev`到dev分支上，然后dev分支有3次提交（按提交顺序记commitid分别为c1,c2,c3），这时我当前版本就是commitid为最新提交的c3,所以HEAD就指向c3,当我用`git reset --hard c1`命令回到第一次提交的版本时，这时HEAD就指向c1。
 
 https://cdn.liaoxuefeng.com/cdn/files/attachments/001384907584977fc9d4b96c99f4b5f8e448fbd8589d0b2000/0
 https://cdn.liaoxuefeng.com/cdn/files/attachments/001384907594057a873c79f14184b45a1a66b1509f90b7a000/0
