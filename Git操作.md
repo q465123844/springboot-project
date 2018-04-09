@@ -27,8 +27,8 @@
 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令`git reset HEAD <file>`，就回到了场景1，第二步按场景1操作。
   
 * 当执行 `git checkout HEAD .` 或者 `git checkout HEAD <file>` 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。 
->所以总结起来就是， `git checkout -- <file>`是从缓存区到工作区，`git reset HEAD`是从版本库到缓存区，`git checkout HEAD <file>`是从版本库直接到工作区。可以看出`git checkout HEAD <file>`命令是上面`git reset HEAD`和`git checkout -- <file>`两个命令的结合 。而且这里HEAD可以换作任意的commitid。我们通常关注的是工作区和版本库，所以我觉得最常用的命令就是`git checkout <commitid> <file>/.`,这样我们的工作区就可以在不同的提交之间切换。而且如果我们给每个commit打上标签（tag）我们给每个提交起个有意义的tag,我们就可以使用`git checkout <tag> <file>/.`在不同的commit之间切换。比如我这里有两次commit,分别打标签为one,two,当我想去第一次commit的地方，使用`git checkout one .`,这时工作区的内容就是第一次是的状态，再用`git checkout two .`,工作区就变成了第二次提交的状态，这里注意`git checkout one .`和`git checkout one`的不同，第二个命令是切换分支（如果有one分支，就切换到其上，当然我们这里没有创建one分支）。这里我试验一下，当使用`git checkout one`也会将工作区变为第一次提交的状态，而且HEAD指向也变为one了。又牵扯出一些我不太了解的情况，暂时先探讨到这里。
-
+>所以总结起来就是， `git checkout -- <file>`是从缓存区到工作区，`git reset HEAD`是从版本库到缓存区，`git checkout HEAD <file>`是从版本库直接到工作区。可以看出`git checkout HEAD <file>`命令是上面`git reset HEAD`和`git checkout -- <file>`两个命令的结合 。而且这里HEAD可以换作任意的commitid。我们通常关注的是工作区和版本库，所以我觉得最常用的命令就是`git checkout <commitid> <file>/.`,这样我们的工作区就可以在不同的提交之间切换。而且如果我们给每个commit打上标签（tag）我们给每个提交起个有意义的tag,我们就可以使用`git checkout <tag> <file>/.`在不同的commit之间切换。比如我这里有两次commit,分别打标签为one,two,当我想去第一次commit的地方，使用`git checkout one .`,这时工作区的内容就是第一次是的状态，再用`git checkout two .`,工作区就变成了第二次提交的状态，这里注意`git checkout one .`和`git checkout one`的不同，第二个命令是切换分支（如果有one分支，就切换到其上，当然我们这里没有创建one分支）。这里我试验一下，当使用`git checkout one`也会将工作区变为第一次提交的状态，而且HEAD指向也变为one了。又牵扯出一些我不太了解的情况，暂时先探讨到这里。 
+接下来还可以探讨`git reset --hard <tag>`命令，不仅可以将工作区在不同commit之间切换，而且HEAD的指向也会在变换。
 
 
 * 当执行 `git rm --cached <file>` 命令时，会直接从暂存区删除文件，工作区则不做出改变。  
