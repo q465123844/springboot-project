@@ -4,7 +4,7 @@
 答：`git reset HEAD`命令是`git reset HEAD .`的缩写，执行这个命令，暂存区的目录树会被重写，被 HEAD指向的目录树所替换，但是工作区不受影响，如果要让工作区也被重写，可以加上--hard参数，即`git reset --hard HEAD`，也可以用`git checkout HEAD .`命令，下面对其有进一步的讲解。再进一步，以上的HEAD都可以换成任意的commitid或tag，例如`git reset two`,暂存区内容将被标签为two的提交所重写，并且将HEAD指向two标签处的提交。     
 答：`git checkout -b 8-4 8-4`这个命令中第一个8-4是指当前分支的8-4标签，第二个8-4是指一个新的分支，这个命令的意义是，在当前分支的8-4标签处新建一个新的分支8-4，并切换到8-4分支上去，并且这时HEAD是指向8-4分支的8-4标签对应的提交上。      
 下面用一系列命令说明了这个过程。（为了便于演示，我之前已经在上面三次提交上分别打了one,two,three三个标签）     
-![](https://github.com/sqmax/springboot-project/blob/blog/blog/pic/2.PNG)      
+![](https://github.com/sqmax/springboot-project/blob/blog/blog/pic/3.PNG)      
 
 下面写一些我对相关命令的探究，主要结合了菜鸟教程，廖雪峰Git教程，并加入了自己的理解和实验。   
 
