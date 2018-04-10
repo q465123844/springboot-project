@@ -17,7 +17,7 @@
 * 版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。
 
 下面这个图展示了工作区、版本库中的暂存区和版本库之间的关系：  
-![](https://www.runoob.com/wp-content/uploads/2015/02/1352126739_7909.jpg)
+![](https://github.com/sqmax/springboot-project/blob/blog/blog/pic/pic.png)
 
 图中左侧为工作区，右侧为版本库。在版本库中标记为 "index" 的区域是暂存区（stage, index），标记为 "master" 的是 master 分支所代表的目录树。
 图中我们可以看出此时 "HEAD" 实际是指向 master 分支的一个"游标"。所以图示的命令中出现 HEAD 的地方可以用 master 来替换。
