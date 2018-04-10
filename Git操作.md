@@ -48,14 +48,15 @@
 `git show HEAD~4` #查看HEAD上溯4代的信息    
 注意：windows下shell把^当做换行转义了，类似\,可以这样使用`git show "HEAD^"`使用，也可以这样`git show HEAD~1`。
 
-------------------------
 ### git学习方法总结
 建立一个文件夹，`git init`成一个版本库，建一个.txt文件，并一直打开，修改几次并提交，然后探究各种命令，期间需要不断地`git status`,查看.txt文件，来观察工作区，暂存区，版本库的变化，还可以`git log`,`git reflog`,`git branch`,`git tag`,`git show HEAD`查看各种信息。
 
 详细的git教程参见:[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743862006503a1c5bf5a783434581661a3cc2084efa000)
 [菜鸟教程](http://www.runoob.com/git/git-workspace-index-repo.html)
 
-## 下面对一些分支和标签相关的操作，作一下总结
+------------------------
+
+## 下面对一些分支和标签相关的操作，作一下复习
 
 ### git分支相关的命令
 
