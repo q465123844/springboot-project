@@ -89,10 +89,7 @@ https://cdn.liaoxuefeng.com/cdn/files/attachments/001384907594057a873c79f14184b4
 
 * 给指定的commit打标签   
 打标签不一定打在当前的head上，如果想打在以前的提交上，可以使用以下命令   
-`git tag -a "mytag" "commitId"`
-
-* 给指定commitid打标签时写注释
-`git tag -a "mytag" -m "commitId"`
+`git tag -a "mytag" "commitId"` #输入这个命令后终端会变成一个vim编辑器，让你输入对tag的注释。
 
 * 将标签提交到git服务器    
 通常git push不会将标签提交到git服务器，我们需要显式操作     
