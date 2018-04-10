@@ -110,7 +110,7 @@
 再从远程删除： `git push orign :refs/tags/"mytag"`  #注意这里删除命令也是push，你没有看错
 
 ### git学习方法总结
-建立一个文件夹，`git init`成一个版本库，建一个.txt文件，并一直打开，修改几次并提交，然后探究各种命令，期间需要不断地`git status`,查看.txt文件，来观察工作区，缓存区，版本库的变化，还可以`git log`,`git reflog`,`git show HEAD`查看各种信息。
+建立一个文件夹，`git init`成一个版本库，建一个.txt文件，并一直打开，修改几次并提交，然后探究各种命令，期间需要不断地`git status`,查看.txt文件，来观察工作区，暂存区，版本库的变化，还可以`git log`,`git reflog`,`git show HEAD`查看各种信息。
 
 详细的git教程参见:[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743862006503a1c5bf5a783434581661a3cc2084efa000)
 [菜鸟教程](http://www.runoob.com/git/git-workspace-index-repo.html)
