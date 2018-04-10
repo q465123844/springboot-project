@@ -1,7 +1,7 @@
 ## 问题：视频中老师用到`git reset HEAD`命令，什么意思
 ## 问题：视频中老师用了这个命令：`git checkout -b v8-4 v8-4`,什么意思?
 
-答：`git reset HEAD`命令是`git reset HEAD .`的缩写，执行这个命令，暂存区的目录树会被重写，被 HEAD指向的目录树所替换，但是工作区不受影响，如果要让工作区也被重写，可以加上--hard参数，即`git reset --hard HEAD`。再进一步，以上的HEAD都可以换成任意的commitid或tag，例如`git reset two`,暂存区内容将被标签为two的提交所重写，并且将HEAD指向two标签处的提交。     
+答：`git reset HEAD`命令是`git reset HEAD .`的缩写，执行这个命令，暂存区的目录树会被重写，被 HEAD指向的目录树所替换，但是工作区不受影响，如果要让工作区也被重写，可以加上--hard参数，即`git reset --hard HEAD`，也可以用`git checkout HEAD .`命令，下面对其有进一步的讲解。再进一步，以上的HEAD都可以换成任意的commitid或tag，例如`git reset two`,暂存区内容将被标签为two的提交所重写，并且将HEAD指向two标签处的提交。     
 答：`git checkout -b 8-4 8-4`这个命令中第一个8-4是指当前分支的8-4标签，第二个8-4是指一个新的分支，这个命令的意义是，在当前分支的8-4标签处新建一个新的分支8-4，并切换到8-4分支上去，并且这时HEAD是指向8-4分支的8-4标签对应的提交上。      
 下面用一系列命令说明了这个过程。（为了便于演示，我之前已经在上面三次提交上分别打了one,two,three三个标签）     
 ![](https://github.com/sqmax/springboot-project/blob/blog/blog/pic/2.PNG)      
@@ -49,7 +49,7 @@
 注意：windows下shell把^当做换行转义了，类似\,可以这样使用`git show "HEAD^"`使用，也可以这样`git show HEAD~1`。
 
 ### git学习方法总结
-建立一个文件夹，`git init`成一个版本库，建一个.txt文件，并一直打开，修改几次并提交，然后探究各种命令，期间需要不断地`git status`,查看.txt文件，来观察工作区，暂存区，版本库的变化，还可以`git log`,`git reflog`,`git branch`,`git tag`,`git show HEAD`查看各种信息。
+建立一个文件夹，`git init`成一个版本库，建一个.txt文件，并一直打开，修改几次并提交，然后探究各种命令，期间需要不断地`git status`来查看文件的提交状态、NotePad++查看工作区.txt文件（或者用`git diff HEAD .`命令来查看工作区和版本库里面最新版本的区别），来观察工作区，暂存区，版本库的变化，还可以`git log`,`git reflog`,`git branch`,`git tag`,`git show HEAD`查看各种信息。
 
 详细的git教程参见:[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743862006503a1c5bf5a783434581661a3cc2084efa000)
 [菜鸟教程](http://www.runoob.com/git/git-workspace-index-repo.html)
