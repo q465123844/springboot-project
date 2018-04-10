@@ -46,7 +46,7 @@
 `git show HEAD` #查看HEAD指向的版本库的信息      
 `git show HEAD^^` #查看HEAD指向版本的上一个版本的信息      
 `git show HEAD~4` #查看HEAD上溯4代的信息    
-注意：windows下shell把^当做换行转义了，类似\,可以这样使用`git show "HEAD^"`使用，也可以这样`git show HEAD~1`。
+注意：windows下shell把`^`当做换行转义了，类似于`\`,可以这样使用`git show "HEAD^"`，也可以这样`git show HEAD~1`。
 
 ### git学习方法总结
 建立一个文件夹，`git init`成一个版本库，建一个.txt文件，并一直打开，修改几次并提交，然后探究各种命令，期间需要不断地`git status`来查看文件的提交状态、NotePad++查看工作区.txt文件（或者用`git diff HEAD .`命令来查看工作区和版本库里面最新版本的区别），来观察工作区，暂存区，版本库的变化，还可以`git log`,`git reflog`,`git branch`,`git tag`,`git show HEAD`查看各种信息。
