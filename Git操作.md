@@ -22,6 +22,10 @@
 * 暂存区：英文叫stage, 或index。一般存放在 ".git目录下" 下的index文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。
 * 版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。
 
+我们可以用下面的命令查看三个地方文件的区别：    
+`git diff HEAD --` #查看版本库和工作区的区别    
+`git diff --staged` #查看版本库和缓存区的区别     
+
 下面这个图展示了工作区、版本库中的暂存区和版本库之间的关系：  
 ![](https://github.com/sqmax/springboot-project/blob/blog/blog/pic/pic.png)
 
