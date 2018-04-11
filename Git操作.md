@@ -62,7 +62,9 @@
 * 很多命名我们只有时间后才能够对其真正地理解，我的做法是，建立一个文件夹，`git init`成一个版本库，建一个.txt文件，并一直打开，修改几次并提交，然后探究各种命令，期间需要不断地`git status`来查看文件的提交状态、NotePad++查看工作区.txt文件（或者用`git diff HEAD .`命令来查看工作区和版本库里面最新版本的区别），来观察工作区，暂存区，版本库的变化，还可以`git log`,`git reflog`,`git branch`,`git tag`,`git show HEAD`查看各种信息。
 * 学会把一个命令分解开来看，很多命令都是这么一种形式的，谓语（动作）、宾语（作用对象）、状语（作用范围），并且，很多命令是简写的（把状语省略了，常见的就是当作用于所有文件时，省略`.`），我们要学会把它补全,这样我们才能够弄清楚一个命令的本质，熟练记忆。
 >下面几个命令就可以这样来分解：    
-`git reset HEAD`(`git reset HEAD .`的简写)，`git diff <commitid/tag/branch> <commitid/tag/branch>`(`git diff <commitid/tag/branch> <commitid/tag/branch>`的简写)，`git checkout <commitid/tag> .`(这个命令的特殊情况（`git checkout HEAD .`）的意义上面有介绍，注意这个命令不能省略后面的状语，我试验过)。
+* `git reset HEAD`(`git reset HEAD .`的简写)。
+* `git diff <commitid/tag/branch> <commitid/tag/branch>`(`git diff <commitid/tag/branch> <commitid/tag/branch>`的简写)。
+* `git checkout <commitid/tag> .`(这个命令的特殊情况（`git checkout HEAD .`）的意义上面有介绍，注意这个命令不能省略后面的状语，我试验过)。
 
 
 ------------------------
@@ -125,6 +127,21 @@
 如果标签已推送到远程，要删除远程标签，需要：        
 先从本地删除： `git tag -d "mytag"`    
 再从远程删除： `git push orign :refs/tags/"mytag"`  #注意这里删除命令也是push，你没有看错
+
+### 一些使用小技巧     
+* 使用`git config --global alias.<别名> 命令`给git命令起别名。
+> 如`git config --global alias.br branch` #以后就可以用`git br`代替`git branch`
+
+* 查看配置信息
+`git config -l`
+
+* 格式化`git log`查看日志的方式
+`git log –graph –pretty=format:’%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset’ –abbrev-commit –date=relative`     
+我们可以为这个长命令它起个别名
+`git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"`    
+下面格式化后的日志看起来是不是清爽很多。    
+![]()
+
 
 
 详细的git入门教程参见:[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743862006503a1c5bf5a783434581661a3cc2084efa000)
