@@ -135,12 +135,12 @@
 * 查看配置信息
 `git config -l`
 
-* 格式化`git log`查看日志的方式
-`git log –graph –pretty=format:’%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset’ –abbrev-commit –date=relative`     
-我们可以为这个长命令它起个别名
+* 格式化`git log`查看日志的方式       
+`git log –graph –pretty=format:’%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset’ –abbrev-commit –date=relative`          
+我们可以为这个长命令它起个别名       
 `git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"`    
-下面格式化后的日志看起来是不是清爽很多。    
-![]()
+下面格式化后的日志看起来是不是清爽很多。        
+![](https://github.com/sqmax/springboot-project/blob/blog/blog/pic/4.PNG)
 
 
 
