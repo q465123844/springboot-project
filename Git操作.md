@@ -3,8 +3,8 @@
 
 * 答：`git reset HEAD`命令是`git reset HEAD .`的缩写，执行这个命令，暂存区的目录树会被重写，被 HEAD指向的目录树所替换，但是工作区不受影响，如果要让工作区也被重写，可以加上--hard参数，即`git reset --hard HEAD`，也可以用`git checkout HEAD .`命令（下面对其有进一步的讲解）。再进一步，以上的HEAD都可以换成任意的commitid或tag，例如`git reset two`,暂存区内容将被标签为two的提交所重写，并且将HEAD指向two标签处的提交。
   >对于`git reset <commitid/tag/HEAD> <./file>`		  
-我们把命令分解为三个部分，`git reset`、`<commitid/tag/HEAD`、`<./file>`。     
-第一部分`git reset`：这个命令有两个功能：1.重置`HEAD`的指向，使`HEAD`指向指定的`<commitid/tag>`。 2.用`<commitid/tag>`指向的提交重写缓存区。    
+我们把命令分解为三个部分，`reset`、`<commitid/tag/HEAD`、`<./file>`。     
+第一部分`reset`：这个命令有两个功能：1.重置`HEAD`的指向，使`HEAD`指向指定的`<commitid/tag>`。 2.用`<commitid/tag>`指向的提交重写缓存区。    
 第二部分`<commitid/tag>`：它是`git reset`作用的对象，指任意一次提交(或其tag)，特殊情况这个作用对象是`HEAD`（因为`HEAD`也指向一次提交的）,即`git reset HEAD`,这时`HEAD`是`git reset`作用的对象，就是将`HEAD`指向`HEAD`,并用`HEAD`指向的提交重写缓存区。      
 第三部分`<./file>`: 它是指定要被重写的范围，可以指定某一个文件，也可以用`.`指定重写所有文件。    
 
