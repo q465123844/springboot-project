@@ -59,10 +59,11 @@
 注意：windows下shell把`^`当做换行转义了，类似于`\`,可以这样使用`git show "HEAD^"`，也可以这样`git show HEAD~1`。
 
 ### git学习方法总结
-建立一个文件夹，`git init`成一个版本库，建一个.txt文件，并一直打开，修改几次并提交，然后探究各种命令，期间需要不断地`git status`来查看文件的提交状态、NotePad++查看工作区.txt文件（或者用`git diff HEAD .`命令来查看工作区和版本库里面最新版本的区别），来观察工作区，暂存区，版本库的变化，还可以`git log`,`git reflog`,`git branch`,`git tag`,`git show HEAD`查看各种信息。
+* 很多命名我们只有时间后才能够对其真正地理解，我的做法是，建立一个文件夹，`git init`成一个版本库，建一个.txt文件，并一直打开，修改几次并提交，然后探究各种命令，期间需要不断地`git status`来查看文件的提交状态、NotePad++查看工作区.txt文件（或者用`git diff HEAD .`命令来查看工作区和版本库里面最新版本的区别），来观察工作区，暂存区，版本库的变化，还可以`git log`,`git reflog`,`git branch`,`git tag`,`git show HEAD`查看各种信息。
+* 学会把一个命令分解开来看，很多命令都是这么一种形式的，谓语（动作）、宾语（作用对象）、状语（作用范围），并且，很多命令是简写的（把状语省略了，常见的就是当作用与所有文件时，省略`.`），我们要学会把它补全,这样我们才能够弄清楚一个命令的本质，熟练记忆。
+>下面两个命令可以这样来分解：    
+`git reset HEAD`(`git reset HEAD .`的简写)，`git diff <commitid/tag/branch> <commitid/tag/branch>`(`git diff <commitid/tag/branch> <commitid/tag/branch>`的简写)，`git checkout <commitid/tag> .`(这个命令的特殊情况（`git checkout HEAD .`）的意义上面有介绍，注意这个命令不能省略后面的状语，我试验过)。
 
-详细的git教程参见:[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743862006503a1c5bf5a783434581661a3cc2084efa000)
-[菜鸟教程](http://www.runoob.com/git/git-workspace-index-repo.html)
 
 ------------------------
 
@@ -126,4 +127,6 @@
 再从远程删除： `git push orign :refs/tags/"mytag"`  #注意这里删除命令也是push，你没有看错
 
 
+详细的git入门教程参见:[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743862006503a1c5bf5a783434581661a3cc2084efa000)
+[菜鸟教程](http://www.runoob.com/git/git-workspace-index-repo.html)
 
