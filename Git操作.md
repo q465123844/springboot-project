@@ -1,7 +1,7 @@
 ## 问题：视频中老师用到`git reset HEAD`命令，什么意思
 ## 问题：视频中老师用了这个命令：`git checkout -b v8-4 v8-4`,什么意思?
 
-* 答：`git reset HEAD`命令是`git reset HEAD .`的缩写，执行这个命令，暂存区的目录树会被重写，被 HEAD指向的目录树所替换，但是工作区不受影响，如果要让工作区也被重写，可以加上--hard参数，即`git reset --hard HEAD`，也可以用`git checkout HEAD .`命令，下面对其有进一步的讲解。再进一步，以上的HEAD都可以换成任意的commitid或tag，例如`git reset two`,暂存区内容将被标签为two的提交所重写，并且将HEAD指向two标签处的提交。
+* 答：`git reset HEAD`命令是`git reset HEAD .`的缩写，执行这个命令，暂存区的目录树会被重写，被 HEAD指向的目录树所替换，但是工作区不受影响，如果要让工作区也被重写，可以加上--hard参数，即`git reset --hard HEAD`，也可以用`git checkout HEAD .`命令（下面对其有进一步的讲解）。再进一步，以上的HEAD都可以换成任意的commitid或tag，例如`git reset two`,暂存区内容将被标签为two的提交所重写，并且将HEAD指向two标签处的提交。
 >对于`git reset <commitid/tag/HEAD> <./file>`		  
 我们把命令分解为三个部分，`git reset`、`<commitid/tag/HEAD`、`<./file>`。     
 第一部分`git reset`：这个命令有两个功能：1.重置`HEAD`的指向，使`HEAD`指向指定的`<commitid/tag>`。 2.用`<commitid/tag>`指向的提交重写缓存区。    
