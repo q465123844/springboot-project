@@ -5,7 +5,7 @@
 >对于`git reset <commitid/tag/HEAD> <./file>`		  
 我们把命令分解为三个部分，`git reset`、`<commitid/tag/HEAD`、`<./file>`。     
 第一部分`git reset`：这个命令有两个功能：1.重置`HEAD`的指向，使`HEAD`指向指定的`<commitid/tag>`。 2.用`<commitid/tag>`指向的提交重写缓存区。    
-第二部分`<commitid/tag>`：它是`git reset`作用的对象，指任意一次提交(或其tag)，特殊情况这个作用对象是`HEAD`（因为`HEAD`也指向一次提交的）,即`git reset HEAD`,这时`HEAD`是`git reset`作用的对象，就是将`HEAD`指向`HEAD`,并用`HEAD`指向的提交重写缓存区。
+第二部分`<commitid/tag>`：它是`git reset`作用的对象，指任意一次提交(或其tag)，特殊情况这个作用对象是`HEAD`（因为`HEAD`也指向一次提交的）,即`git reset HEAD`,这时`HEAD`是`git reset`作用的对象，就是将`HEAD`指向`HEAD`,并用`HEAD`指向的提交重写缓存区。      
 第三部分`<./file>`: 它是指定要被重写的范围，可以指定某一个文件，也可以用`.`指定重写所有文件。    
 
 * 答：`git checkout -b 8-4 8-4`这个命令中第一个8-4是指当前分支的8-4标签，第二个8-4是指一个新的分支，这个命令的意义是，在当前分支的8-4标签处新建一个新的分支8-4，并切换到8-4分支上去，并且这时HEAD是指向8-4分支的8-4标签对应的提交上。      
