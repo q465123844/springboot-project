@@ -1,4 +1,6 @@
 ## 项目技术栈
+（详情见[Wiki](https://github.com/sqmax/springboot-project/wiki)）   
+
 ### SpringBoot的相关特性
 
 * SpringBoot+JPA
