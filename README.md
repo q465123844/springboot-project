@@ -34,10 +34,14 @@ Fiddler对手机请求抓包
 
 【商品】和【商品类目】下均有两项操作：【列表】【新增】。      
 下面以【商品】栏为例演示。     
-点击商品->列表可以查看商品的详情，对每件商品又可以又修改和下架操作。    
+点击商品->列表可以查看商品的详情。       
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/26.PNG)
 
+ 对每件商品又有修改和下架操作。   
+ 
+ ![](https://github.com/sqmax/springboot-project/blob/blog/pic/23.PNG)     
+ 
 ### 买家端
 买家端是基于微信公众号的点餐app。      
 
