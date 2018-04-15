@@ -15,13 +15,13 @@
 
 ### 买家端
 买家端是基于微信公众号的点餐app。
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/28.PNG)
+![](https://github.com/sqmax/springboot-project/blob/blog/pic/28.jpg)
 
 ### 买家端和卖家端的通信
 我们使用Postman模仿微信买家端创建订单的post请求，这时卖家端首页，即【订单】页面就会弹出一个窗口，并播放音乐。
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/27.PNG)
 点击关闭按钮，买家微信端会收到一个微信模板消息。
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/29.PNG)
+![](https://github.com/sqmax/springboot-project/blob/blog/pic/29.jpg)
 
 
 
