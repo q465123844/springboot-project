@@ -12,14 +12,18 @@
 * 微信模板消息推送
 * 使用微信相关的开源SDK
 
-### 利用Redis应用分布式Sessi和锁
+### 利用Redis应用分布式Session和锁
 
-### 开发工具
-IDEA
-Maven
-Git
-Postman模拟微信订单
+### 开发环境及工具
+IDEA   
+Maven   
+Git   
+MySQL
+Redis                
+cosntos虚拟机部署卖家端的前端                                              
+Postman模拟微信订单创建订单
 Fiddler对手机请求抓包
+Natapp内网穿透                                                    
 
 ## 项目演示
 
