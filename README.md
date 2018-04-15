@@ -4,7 +4,8 @@
 
 ### 卖家端（PC端）
 浏览器输入授权路径,进入微信扫码登陆系统页面
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/24.PNG)
+![](https://github.com/sqmax/springboot-project/blob/blog/pic/24.PNG)                                                         
+
 登陆后，从左侧导航栏可以看到有四项【订单】，【商品】，【类目】，【登出】，右侧是卖家管理系统的首页，也即【订单】界面,对订单有取消和查看订单详情操作。
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/25.PNG)
 
