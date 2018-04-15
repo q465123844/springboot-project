@@ -40,12 +40,11 @@ Natapp内网穿透
 
 【商品】和【商品类目】下均有两项操作：【列表】【新增】。      
 下面以【商品】栏为例演示。     
-点击商品->列表可以查看商品的详情。       
+点击商品->列表可以查看商品的详情，可以看到对每件商品又有【修改】和【上架】/【下架】操作 。       
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/26.PNG)
 
- 对每件商品又有【修改】和【上架】/【下架】操作
- 
+点击商品->新增来新增商品        
  ![](https://github.com/sqmax/springboot-project/blob/blog/pic/23.PNG)     
  
 ### 买家端
@@ -61,6 +60,5 @@ Natapp内网穿透
 点击关闭按钮，买家微信端会收到一个微信模板消息。      
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/29.jpg)
-
 
 
