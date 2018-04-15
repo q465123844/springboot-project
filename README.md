@@ -58,8 +58,20 @@ Natapp内网穿透
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/28.jpg)
 
+选购好商品后就可以去结算。
+
+![](https://github.com/sqmax/springboot-project/blob/blog/pic/30.jpg)
+
+结算完成，可以看到一条微信支付凭证消息。
+
+![](https://github.com/sqmax/springboot-project/blob/blog/pic/31.jpg)
+
+可以选择查看账单。
+
+![](https://github.com/sqmax/springboot-project/blob/blog/pic/32.jpg)
+
 ### 买家端和卖家端的通信
-我们使用Postman模仿微信买家端创建订单的post请求，这时卖家端首页，即【订单】页面就会弹出一个窗口，并播放音乐。   
+因为我是借用的微信公众账号，买家端和卖家端不能连调，我这里用Postman这个工具，发送一条post请求，来模拟微信下单。这时卖家端首页，即【订单】页面就会弹出一个窗口，并播放音乐。   
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/27.PNG)  
 
