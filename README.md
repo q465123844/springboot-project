@@ -24,8 +24,8 @@ MySQL
 Redis                
 cosntos虚拟机部署卖家端的前端                                              
 Postman模拟微信订单创建订单
-Fiddler对手机请求抓包
-Natapp内网穿透                                                    
+Fiddler对手机请求抓包    
+Natapp内网穿透                                                       
 
 ## 项目演示
 
