@@ -44,7 +44,7 @@ Natapp内网穿透
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/26.PNG)
 
- 对每件商品又有修改和下架操作。   
+ 对每件商品又有【修改】和【上架】/【下架】操作
  
  ![](https://github.com/sqmax/springboot-project/blob/blog/pic/23.PNG)     
  
