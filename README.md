@@ -34,9 +34,15 @@ Natapp内网穿透
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/24.PNG)                                                         
 
-登陆后，从左侧导航栏可以看到有四项【订单】，【商品】，【类目】，【登出】，右侧是卖家管理系统的首页，也即【订单】界面,对订单有取消和查看订单详情操作。 
+登陆后，从左侧导航栏可以看到有四项【订单】，【商品】，【类目】，【登出】，右侧是卖家管理系统的首页，也即【订单】界面。   
 
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/25.PNG)
+![](https://github.com/sqmax/springboot-project/blob/blog/pic/25.PNG)   
+
+ 对每项订单有【取消】和查看订单【详情】操作。
+ 
+ ![](https://github.com/sqmax/springboot-project/blob/blog/pic/28.PNG)
+ 
+ 我们可以选择完结订单或取消该订单。       
 
 【商品】和【商品类目】下均有两项操作：【列表】【新增】。      
 下面以【商品】栏为例演示。     
