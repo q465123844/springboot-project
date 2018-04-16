@@ -1,5 +1,3 @@
-# 在此处输入标题
-
 ## 项目介绍  
 * 前端是由Vue.js构建的WebApp，后端由Spring Boot打造，后端的前台页面使用Bootstap+Freemarker+JQuery构建,后端和前端通过RESTful风格的接口相连。
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/34.PNG)
@@ -51,7 +49,7 @@
 * Fiddler对手机请求抓包    
 * Natapp内网穿透                                                       
 ## 项目演示   
-* 卖家端（PC端）  
+#### 卖家端（PC端）  
 浏览器输入授权路径,进入微信扫码登陆系统页面         
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/24.PNG)                                                         
@@ -92,7 +90,7 @@
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/32.jpg)
 
-### 买家端和卖家端的通信
+#### 买家端和卖家端的通信
 因为我是借用的微信公众账号，买家端和卖家端不能连调，我这里用Postman这个工具，发送一条post请求，来模拟微信下单。这时卖家端首页，即【订单】页面就会弹出一个窗口，并播放音乐。   
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/27.PNG)  
