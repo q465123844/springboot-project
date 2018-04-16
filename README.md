@@ -1,5 +1,30 @@
+## 项目介绍  
+* 前端是由Vue.js构建的WebApp，后端由Spring Boot打造，后端的前台页面使用Bootstap+Freemarker+JQuery构建,后端和前端通过RESTful风格的接口相连。
+![](https://github.com/sqmax/springboot-project/blob/blog/pic/34.PNG)
+* 数据库方面使用Spring Boot+JPA，兼顾Spring Boot+Mybatis；缓存方面使用Spring Boot+Redis；基于Redis,应对分布式Session和分布式锁；消息推送方面，使用WebSocket。
+![](https://github.com/sqmax/springboot-project/blob/blog/pic/21.PNG)
+* 这是一个基于微信的点餐系统，所以还涉及许多微信相关的特性，如微信扫码登陆，微信模板消息推送和微信支付和退款。
+
+## 项目设计
+
+* 角色划分
+    * 卖家（手机端）：由微信公众号提供的一个服务。
+    * 卖家（PC端）：一个简单的商家管理系统
+* 功能模块划分
+    * 功能分析   
+        ![](https://github.com/sqmax/springboot-project/blob/blog/pic/35.PNG)   
+    * 关系图           
+        ![](https://github.com/sqmax/springboot-project/blob/blog/pic/36.PNG)   
+* 部署架构
+    * 买家端在手机端，卖家端在PC端，两端都会发出数据请求，请求首先到达nginx服务器，如果请求的是后端接口，nginx服务器会进行一个转发，转发到后面的Tomcat服务器，即我们的Java项目所在，如果这个接口作了缓存，那么就会访问redis服务器，如果没有缓存，就会访问我们的MySQL数据库。值得注意的是我们的应用是支持分布式部署的，也就是说图上的Tomcat表示的是多台服务器，多个应用。
+    ![](https://github.com/sqmax/springboot-project/blob/blog/pic/37.PNG)
+* 数据库设计
+    *  共5个表。
+    ![](https://github.com/sqmax/springboot-project/blob/blog/pic/38.PNG)       
+
+
 ## 项目技术栈
-（详情见[Wiki](https://github.com/sqmax/springboot-project/wiki)）   
+（详情见[Wiki](https://github.com/sqmax/springboot-project/wiki)）         
 
 ### SpringBoot的相关特性
 
