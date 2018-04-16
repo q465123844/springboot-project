@@ -1,3 +1,5 @@
+# 在此处输入标题
+
 ## 项目介绍  
 * 前端是由Vue.js构建的WebApp，后端由Spring Boot打造，后端的前台页面使用Bootstap+Freemarker+JQuery构建,后端和前端通过RESTful风格的接口相连。
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/34.PNG)
@@ -23,38 +25,33 @@
     ![](https://github.com/sqmax/springboot-project/blob/blog/pic/38.PNG)       
 
 
-## 项目技术栈
-（详情见[Wiki](https://github.com/sqmax/springboot-project/wiki)）         
+## 项目使用的技术栈
+* SpringBoot的相关特性
+    * SpringBoot+JPA
+    * SpringBoot+Redis
+    * SpringBoot+
 
-### SpringBoot的相关特性
+* 微信相关特征
+    * 微信支付
+    * 微信登陆
+    * 微信模板消息推送
+    * 使用微信相关的开源SDK
 
-* SpringBoot+JPA
-* SpringBoot+Redis
-* SpringBoot+
+* 利用Redis应用分布式Session和锁
 
-### 微信相关特征
-
-* 微信支付
-* 微信登陆
-* 微信模板消息推送
-* 使用微信相关的开源SDK
-
-### 利用Redis应用分布式Session和锁
-
-### 开发环境及工具
-IDEA   
-Maven   
-Git   
-MySQL
-Redis                
-cosntos虚拟机部署卖家端的前端                                              
-Postman模拟微信订单创建订单
-Fiddler对手机请求抓包    
-Natapp内网穿透                                                       
-
-## 项目演示
-
-### 卖家端（PC端）
+## 开发环境及工具
+* IDEA   
+* Maven   
+* Git   
+* MySQL
+* Nginx
+* Redis                
+* Centos虚拟机部署卖家端的前端                             
+* Postman模拟微信订单创建订单
+* Fiddler对手机请求抓包    
+* Natapp内网穿透                                                       
+## 项目演示   
+* 卖家端（PC端）  
 浏览器输入授权路径,进入微信扫码登陆系统页面         
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/24.PNG)                                                         
@@ -78,7 +75,7 @@ Natapp内网穿透
 点击商品->新增来新增商品        
  ![](https://github.com/sqmax/springboot-project/blob/blog/pic/23.PNG)     
  
-### 买家端
+* 买家端
 买家端是基于微信公众号的点餐app。      
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/28.jpg)
