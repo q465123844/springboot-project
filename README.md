@@ -1,3 +1,5 @@
+微信点餐项目介绍
+
 ## 项目介绍  
 * 前端是由Vue.js构建的WebApp，后端由Spring Boot打造，后端的前台页面使用Bootstap+Freemarker+JQuery构建,后端和前端通过RESTful风格的接口相连。
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/34.PNG)
@@ -7,23 +9,25 @@
 
 ## 项目设计
 
-* 角色划分
-    * 卖家（手机端）：由微信公众号提供的一个服务。
-    * 卖家（PC端）：一个简单的商家管理系统
-* 功能模块划分
-    * 功能分析   
-        ![](https://github.com/sqmax/springboot-project/blob/blog/pic/35.PNG)   
-    * 关系图           
-        ![](https://github.com/sqmax/springboot-project/blob/blog/pic/36.PNG)   
-* 部署架构
-    * 买家端在手机端，卖家端在PC端，两端都会发出数据请求，请求首先到达nginx服务器，如果请求的是后端接口，nginx服务器会进行一个转发，转发到后面的Tomcat服务器，即我们的Java项目所在，如果这个接口作了缓存，那么就会访问redis服务器，如果没有缓存，就会访问我们的MySQL数据库。值得注意的是我们的应用是支持分布式部署的，也就是说图上的Tomcat表示的是多台服务器，多个应用。
+### 角色划分
+* 卖家（手机端）：由微信公众号提供的一个服务。
+* 卖家（PC端）：一个简单的商家管理系统
+
+### 功能模块划分
+* 功能分析   
+    ![](https://github.com/sqmax/springboot-project/blob/blog/pic/35.PNG)   
+* 关系图           
+    ![](https://github.com/sqmax/springboot-project/blob/blog/pic/36.PNG)   
+
+### 部署架构
+* 买家端在手机端，卖家端在PC端，两端都会发出数据请求，请求首先到达nginx服务器，如果请求的是后端接口，nginx服务器会进行一个转发，转发到后面的Tomcat服务器，即我们的Java项目所在，如果这个接口作了缓存，那么就会访问redis服务器，如果没有缓存，就会访问我们的MySQL数据库。值得注意的是我们的应用是支持分布式部署的，也就是说图上的Tomcat表示的是多台服务器，多个应用。
     ![](https://github.com/sqmax/springboot-project/blob/blog/pic/37.PNG)
-* 数据库设计
-    *  共5个表，表之间的关系如下，其中商品表存放的就是商品的名称，价格库存，图片链接等信息；类目表含有类目id,类目名字等信息，一个类目下有多种商品，类目表和商品表之间是一对多的关系；订单详情表含有购买的商品名称，数量，所属订单的订单号等信息；订单主表包含包含该订单的订单号，买家的信息，订单的支付状态等信息，订单主表和订单详情表之间是一对多的关系；最后是卖家信息表，存放的卖家的账号和密码等信息，作为卖家后台管理的权限认证。    
+### 数据库设计
+*  共5个表，表之间的关系如下，其中商品表存放的就是商品的名称，价格库存，图片链接等信息；类目表含有类目id,类目名字等信息，一个类目下有多种商品，类目表和商品表之间是一对多的关系；订单详情表含有购买的商品名称，数量，所属订单的订单号等信息；订单主表包含包含该订单的订单号，买家的信息，订单的支付状态等信息，订单主表和订单详情表之间是一对多的关系；最后是卖家信息表，存放的卖家的账号和密码等信息，作为卖家后台管理的权限认证。    
     ![](https://github.com/sqmax/springboot-project/blob/blog/pic/38.PNG)       
 
 
-## 项目使用的技术栈
+## 项目使用的主要技术栈
 * SpringBoot的相关特性
     * SpringBoot+JPA
     * SpringBoot+MyBatis
@@ -36,6 +40,9 @@
     * 微信模板消息推送
     * 使用微信相关的开源SDK
 * 利用Redis应用分布式Session和锁
+* 其它
+    * Maven构建项目
+    * Git版本管理
 
 ## 开发环境及工具
 * IDEA   
@@ -44,7 +51,7 @@
 * MySQL
 * Nginx
 * Redis                
-* Centos虚拟机部署买家端的前端                             
+* Centos虚拟机部署卖家端的前端                             
 * Postman模拟微信订单创建订单
 * Fiddler对手机请求抓包    
 * Natapp内网穿透                                                       
@@ -102,5 +109,3 @@
 这时微信那边就会收到如下的模板消息。   
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/29.jpg)
-
-
