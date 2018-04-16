@@ -44,12 +44,12 @@
 * MySQL
 * Nginx
 * Redis                
-* Centos虚拟机部署卖家端的前端                             
+* Centos虚拟机部署买家端的前端                             
 * Postman模拟微信订单创建订单
 * Fiddler对手机请求抓包    
 * Natapp内网穿透                                                       
 ## 项目演示   
-#### 卖家端（PC端）  
+### 卖家端（PC端）  
 浏览器输入授权路径,进入微信扫码登陆系统页面         
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/24.PNG)                                                         
@@ -73,7 +73,7 @@
 点击商品->新增来新增商品        
  ![](https://github.com/sqmax/springboot-project/blob/blog/pic/23.PNG)     
  
-* 买家端
+### 买家端
 买家端是基于微信公众号的点餐app。      
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/28.jpg)
@@ -90,7 +90,7 @@
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/32.jpg)
 
-#### 买家端和卖家端的通信
+### 买家端和卖家端的通信
 因为我是借用的微信公众账号，买家端和卖家端不能连调，我这里用Postman这个工具，发送一条post请求，来模拟微信下单。这时卖家端首页，即【订单】页面就会弹出一个窗口，并播放音乐。   
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/27.PNG)  
