@@ -75,7 +75,11 @@ Natapp内网穿透
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/27.PNG)  
 
-点击关闭按钮，买家微信端会收到一个微信模板消息。      
+点击关闭按钮，在订单页面找到找到新下的订单，点击【详情】来到订单详情界面，点击【完结订单】按钮。
+
+![](https://github.com/sqmax/springboot-project/blob/blog/pic/33.PNG)
+
+这时微信那边就会收到如下的模板消息。   
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/29.jpg)
 
