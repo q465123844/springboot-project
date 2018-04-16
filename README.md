@@ -1,4 +1,5 @@
 ## 基于SpringBoot的微信点餐系统
+>这里只是对项目做一个整体的介绍，项目中设计的知识细节及难点以博客的形式整理在Wiki里。[Wiki](https://github.com/sqmax/springboot-project/wiki)
 
 ### 目录
 * [项目介绍](#项目介绍)
