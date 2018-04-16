@@ -11,7 +11,7 @@
 * [开发环境及工具](#开发环境及工具)
 * [项目演示](#项目演示)
     * [卖家端（PC端）](#卖家端（PC端）)
-    * [买家端](#买家端)
+    * [买家端（手机微信端）](#买家端（手机微信端）)
     * [买家端和卖家端的通信](#买家端和卖家端的通信)
 
 ## 项目介绍  
@@ -94,7 +94,7 @@
 点击商品->新增来新增商品        
  ![](https://github.com/sqmax/springboot-project/blob/blog/pic/23.PNG)     
  
-### 买家端
+### 买家端（手机微信端）
 买家端是基于微信公众号的点餐app。      
 
 ![](https://github.com/sqmax/springboot-project/blob/blog/pic/28.jpg)
