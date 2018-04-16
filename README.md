@@ -26,16 +26,19 @@
 ## 项目使用的技术栈
 * SpringBoot的相关特性
     * SpringBoot+JPA
+    * SpringBoot+MyBatis
     * SpringBoot+Redis
-    * SpringBoot+
-
+    * SpringBoot+WebSocket
+    
 * 微信相关特征
-    * 微信支付
-    * 微信登陆
+    * 微信支付、退款
+    * 微信授权登陆
     * 微信模板消息推送
     * 使用微信相关的开源SDK
-
 * 利用Redis应用分布式Session和锁
+* 其它
+    * Maven构建项目
+    * Git版本管理
 
 ## 开发环境及工具
 * IDEA   
