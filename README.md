@@ -45,7 +45,6 @@
 ## 项目使用的主要技术栈
 * SpringBoot的相关特性
     * SpringBoot+JPA
-    * SpringBoot+MyBatis
     * SpringBoot+Redis
     * SpringBoot+WebSocket
     
