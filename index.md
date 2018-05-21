@@ -13,9 +13,9 @@
 * [项目演示](#项目演示)
     * [卖家端（PC端）](#卖家端（PC端）)
     * [买家端（手机微信端）](#买家端（手机微信端）)
-    * [买家端和卖家端的通信](#买家端和卖家端的通信)     
-    
-     
+    * [买家端和卖家端的通信](#买家端和卖家端的通信)
+
+---
 
 ## 项目介绍  
 * 前端是由Vue.js构建的WebApp，后端由Spring Boot打造，后端的前台页面使用Bootstap+Freemarker+JQuery构建,后端和前端通过RESTful风格的接口相连。
@@ -32,16 +32,16 @@
 
 ### 功能模块划分
 * 功能分析   
-    ![](https://github.com/sqmax/springboot-project/blob/blog/pic/35.PNG)   
+    ![](http://p91462zt8.bkt.clouddn.com/35.PNG)   
 * 关系图           
-    ![](https://github.com/sqmax/springboot-project/blob/blog/pic/36.PNG)   
+    ![](http://p91462zt8.bkt.clouddn.com/36.PNG)   
 
 ### 部署架构
 * 买家端在手机端，卖家端在PC端，两端都会发出数据请求，请求首先到达nginx服务器，如果请求的是后端接口，nginx服务器会进行一个转发，转发到后面的Tomcat服务器，即我们的Java项目所在，如果这个接口作了缓存，那么就会访问redis服务器，如果没有缓存，就会访问我们的MySQL数据库。值得注意的是我们的应用是支持分布式部署的，也就是说图上的Tomcat表示的是多台服务器，多个应用。
-    ![](https://github.com/sqmax/springboot-project/blob/blog/pic/37.PNG)
+    ![](http://p91462zt8.bkt.clouddn.com/37.PNG)
 ### 数据库设计
 *  共5个表，表之间的关系如下，其中商品表存放的就是商品的名称，价格库存，图片链接等信息；类目表含有类目id,类目名字等信息，一个类目下有多种商品，类目表和商品表之间是一对多的关系；订单详情表含有购买的商品名称，数量，所属订单的订单号等信息；订单主表包含包含该订单的订单号，买家的信息，订单的支付状态等信息，订单主表和订单详情表之间是一对多的关系；最后是卖家信息表，存放的卖家的账号和密码等信息，作为卖家后台管理的权限认证。    
-    ![](https://github.com/sqmax/springboot-project/blob/blog/pic/38.PNG)       
+    ![](http://p91462zt8.bkt.clouddn.com/38.PNG)       
 
 
 ## 项目使用的主要技术栈
@@ -55,10 +55,7 @@
     * 微信授权登陆
     * 微信模板消息推送
     * 使用微信相关的开源SDK
-* 分布式Session和分布式锁      
-    * 对于用户的登录信息，使用Redis对Session进行集中管理
-    * 针对一个抢红包的案例，利用Redis分布式Session来应对高并发请求
-
+* 利用Redis应用分布式Session和锁
 
 ## 开发环境及工具
 * IDEA   
@@ -67,21 +64,19 @@
 * MySQL
 * Nginx
 * Redis                
-* Centos虚拟机部署买家端的前端代码                             
+* Centos虚拟机部署卖家端的前端                             
 * Postman模拟微信订单创建订单
 * Fiddler对手机请求抓包    
-* Natapp内网穿透    
-* Apache ab模拟高并发请求
-
+* Natapp内网穿透                                                       
 ## 项目演示   
 ### 卖家端（PC端）  
 浏览器输入授权路径,进入微信扫码登陆系统页面         
 
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/24.PNG)                                                         
+![](http://p91462zt8.bkt.clouddn.com/24.PNG)                                                         
 
 登陆后，从左侧导航栏可以看到有四项【订单】，【商品】，【类目】，【登出】，右侧是卖家管理系统的首页，也即【订单】界面。   
 
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/25.PNG)   
+![](http://p91462zt8.bkt.clouddn.com/25.PNG)   
 
  对每项订单有【取消】和查看订单【详情】操作。
  
@@ -93,37 +88,42 @@
 下面以【商品】栏为例演示。     
 点击商品->列表可以查看商品的详情，可以看到对每件商品又有【修改】和【上架】/【下架】操作 。       
 
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/26.PNG)
+![](http://p91462zt8.bkt.clouddn.com/26.PNG)
 
 点击商品->新增来新增商品        
- ![](https://github.com/sqmax/springboot-project/blob/blog/pic/23.PNG)     
+ ![](http://p91462zt8.bkt.clouddn.com/23.PNG)     
  
 ### 买家端（手机微信端）
 买家端是基于微信公众号的点餐app。      
 
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/28.jpg)
+![](http://p91462zt8.bkt.clouddn.com/28.jpg)
 
 选购好商品后就可以去结算。
 
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/30.jpg)
+![](http://p91462zt8.bkt.clouddn.com/30.jpg)
 
 结算完成，可以看到一条微信支付凭证消息。
 
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/31.jpg)
+![](http://p91462zt8.bkt.clouddn.com/31.jpg)
 
 可以选择查看账单。
 
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/32.jpg)
+![](http://p91462zt8.bkt.clouddn.com/32.jpg)
 
 ### 买家端和卖家端的通信
 因为我是借用的微信公众账号，买家端和卖家端不能连调，我这里用Postman这个工具，发送一条post请求，来模拟微信下单。这时卖家端首页，即【订单】页面就会弹出一个窗口，并播放音乐。   
 
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/27.PNG)  
+![](http://p91462zt8.bkt.clouddn.com/27.PNG)  
 
 点击关闭按钮，在订单页面找到找到新下的订单，点击【详情】来到订单详情界面，点击【完结订单】按钮。
 
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/33.PNG)
+![](http://p91462zt8.bkt.clouddn.com/33.PNG)
 
 这时微信那边就会收到如下的模板消息。   
 
-![](https://github.com/sqmax/springboot-project/blob/blog/pic/29.jpg)
+![](http://p91462zt8.bkt.clouddn.com/29.jpg)
+
+
+
+
+
