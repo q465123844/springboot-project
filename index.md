@@ -83,11 +83,11 @@
 
 ![](http://p91462zt8.bkt.clouddn.com/25.PNG)   
 
- 对每项订单有【取消】和查看订单【详情】操作。
+ 对每项订单有【取消】和查看订单【详情】操作。点击【详情】来到下面的界面：
  
- ![](https://github.com/sqmax/springboot-project/blob/blog/pic/28.PNG)
+ ![](http://p91462zt8.bkt.clouddn.com/28.PNG)
  
- 我们可以选择完结订单或取消该订单。       
+ 我们可以选择【完结订单】或【取消订单】。       
 
 【商品】和【商品类目】下均有两项操作：【列表】【新增】。      
 下面以【商品】栏为例演示。     
